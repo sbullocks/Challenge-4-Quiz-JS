@@ -20,7 +20,7 @@ body {
     visibility: hidden;
 }
 
-/* .all_btn {
+.all_btn {
     background: darkmagenta; 
     padding: 10px;
     margin: 10px;
@@ -31,5 +31,63 @@ body {
     font-size: 1.em;
     text-align: center;
     cursor: pointer;
-} */
+}
 
+.myBtn {
+    background: orange;
+    color: blue;
+    padding: 10px;
+    margin: 10px;
+    border: 1px black solid;
+    border-radius: 7px;
+    font-size: small;
+}
+
+button {
+    background: orange;
+    color: blue;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 5px;
+}
+
+@media only screen 
+and (max-width:840px) {
+
+    .all_btn{
+        background: darkmagenta; 
+        padding: 10px;
+        margin: 20px;
+        width: 100%; 
+        border: 1px solid cornsilk;
+        border-radius: 5px;
+        color: white;   
+        font-size: 1.em;
+        text-align: center;
+        /* cursor: pointer;  */
+}
+
+.wrapper{
+    margin: 0px;
+    text-align: justify;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+h2{
+    text-align: left;
+}
+
+.finish-section{
+    margin: 0px; 
+    width: 100%; 
+    visibility: hidden;
+}
+
+.final-page{
+
+    margin: 0px; 
+    width: 100%; 
+    visibility: hidden;
+ }
+}
