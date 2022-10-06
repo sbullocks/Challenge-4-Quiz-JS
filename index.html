@@ -6,46 +6,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-    <!-- <link rel="stylesheet" href="../assets/css/reset.css"> -->
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 
 <body>
     <div class="first-page">
-        <!---div that will contain the form of questionnaire page-->
         <div class="row header">
-            <div class="col-md-10 col-sm-6">
-                <h5 id="h-score">View HighScore</h5>
+         <a class="highscore-link" href="./highscores.html"><h5 id="high-score">View HighScore</h5></a>
             </div>
-            <div class="col-md-2 col-sm-6">
                 <h5 id="time">Time: 0 </h5>
             </div>
-
         </div>
 
         <br><br>
 
         <div class="wrapper">
-            <div class=" row ">
-                <div class="col-md-10 col-sm-6">
-                    <h2>Coding Quiz Challenge</h2>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-md-10 col-sm-6">
-                    <p>Try to answer the following code-related questions within the limit.
-                        Keep in mind that incorrect answers will penalize your score
-                        time by 15 seconds</p>
-
-                    <button id="start" class="btn btn-primary btn-lg">Start Quiz</button>
-                </div>
+             <h2>Coding Quiz Challenge</h2>
             </div>
         </div>
-
+            <div class="row">
+                 <p>Try to answer the following code-related questions within the limit.
+                    Keep in mind that incorrect answers will penalize your score
+                    time by 15 seconds</p>
+                    <button id="start" class="start-button">Start Quiz</button>
+            </div>
+        </div>
 
         <!---This is begening of the  div that will contain all the questions  -->
         <div class="divContainer">
@@ -56,34 +42,26 @@
 
             </h3>
             <ol id="q-list">
-
-
             </ol>
 
         </div>
-        <br>
         <div id="response"> </div>
 
         <div class="finish-section">
             <h3>All Done!</h3>
-
             <p id="result"> </p>
             <p id="errorSmg"></p>
 
-            <form class="form-inline">
-                <div class="form-group mb-2">
-                    <h5 id="staticEmail2">Enter initials </h5>
-                </div>
-                <div class="form-group mx-sm-3 mb-2">
-                    <input type="text" class="form-control" id="inputInitial" placeholder="Enter your initials"> </div>
-                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            <h5 id="staticEmail2">Enter initials </h5>
+        </div>
+             <input type="text" class="form-control" id="inputInitial" placeholder="Enter your initials"> </div>
+                <button type="submit" class="submit-button">Submit</button>
             </form>
 
         </div>
         <div class="final-page">
             <h2>HighScores</h2>
-
-            <div class="col-sm-10">
+/            <div class="col-sm-10">
                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1.">
 
             </div>

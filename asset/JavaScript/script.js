@@ -1,7 +1,8 @@
-/**set the time to zero*/
+/** Set the time to zero */
 var timer = 76;
 var timeCount;
-/**this is the timer funtion which will start counting as soon as the quiz starts*/
+
+/** Once the quiz starts the timer begins. */
 function setupTimer() {
     timeCount = setInterval(function () {
         timer--;
@@ -16,7 +17,7 @@ function setupTimer() {
     }, 1000)
 }
  
-/**  Here is the event listener to start the timer and hide the quiz button*/
+/**  Hides the quiz button and starts the timer. */
 document.addEventListener("click", function (event) {
     if (event.target === btnElement) {
         wrapperElement.style.display = "none";
@@ -25,13 +26,9 @@ document.addEventListener("click", function (event) {
     }
 
 })
-
  
-/**declare the index variable for the onclickHandler function**/
 var i = 0;
 
-/**Add a function to compare the answers and 
- * display each questions as the buttons are clicked.*/
 function onclickHandler(event) {
      
     if(timer<=0){
@@ -49,9 +46,7 @@ function onclickHandler(event) {
         responsDiv.setAttribute("style", "color: red")
         responsDiv.textContent = "Wrong";
         timer = timer - 15;
-     }
-    
-      
+     } 
      
     if (i < questions.length-1) {
 
@@ -73,7 +68,7 @@ function onclickHandler(event) {
         divContEL.innerHTML = '';
      }
      
-    /**Function to display users final score */
+    /** This willd display the users final score. */
     function displayResult() {
         finishDiv.style.visibility = "visible";
         timeElement.textContent = "Time:" + " " + timer;
@@ -96,7 +91,8 @@ function onclickHandler(event) {
         }
     }
 }
-/**function to show the last page  */
+
+/** This will show the last page. */
 function renderLastItem() {
     var yourScore = localStorage.getItem("HighScores");
      var yourInitial = localStorage.getItem("Initial");
@@ -111,7 +107,7 @@ function renderLastItem() {
 
 }
  
-//** This event listner submit the initial and final score to the local storage */
+//** getItem and setItem will save values to localStorage. */
 document.addEventListener("submit", function (event) {
     event.preventDefault();
     var initialInput = document.querySelector("#inputInitial").value;
@@ -126,12 +122,12 @@ document.addEventListener("submit", function (event) {
     }
 
 })
-/**This function will refresh the page and send user back to begining page when go back button is clicked */
+/** Relaods page when you click go back button. */
 function init() {
      location.reload();
  
 }
-/**This function will  clear initial and score displayed on the final page */
+/** Clears the scores. */
 function clearScore() {
     initialAndScore.value = "";
     const initialScore = localStorage.getItem("HighScores")

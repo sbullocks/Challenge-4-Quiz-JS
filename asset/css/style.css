@@ -1,6 +1,14 @@
 body{
     margin: 20px!important;
  }
+
+.row {
+    border: 2px red solid;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
  .wrapper{
      margin: 0 auto; 
      width: 700px; 
@@ -21,54 +29,50 @@ body{
   }
  
  .all_btn{
-     background: darkmagenta; 
+     background: rgb(63, 139, 0); 
      padding: 10px;
      margin: 10px;
      width: 30%; 
-     border: 1px solid cornsilk;
+     border: 1px solid orange;
      border-radius: 5px;
-     color: white;   
+     color: blue;   
      font-size: 1.em;
      text-align: center;
-     /* cursor: pointer;  */
-     
-     
  }
+
  .myBtn{
-     background: darkmagenta; 
+    background: rgb(63, 139, 0); 
      padding: 10px;
      margin: 10px; 
-     border: 1px solid cornsilk;
+     border: 1px solid orange;
      border-radius: 5px;
-     color: white;   
+     color: blue;   
      font-size: 1.em;
-     
- 
  }
  
  button{
-     background: darkmagenta!important; 
-      
+    background: rgb(63, 139, 0);
+    border: 2px blue solid;
+    display: flex;
+    align-items: center;
  }
  
  @media only screen 
  and (min-width:320px) 
  and (max-width:540px) {
  
-     .all_btn{
-         background: darkmagenta; 
-         padding: 10px;
-         margin: 20px;
-         width: 100%; 
-         border: 1px solid cornsilk;
-         border-radius: 5px;
-         color: white;   
-         font-size: 1.em;
-         text-align: center;
-         /* cursor: pointer;  */
-         
-         
-     }
+    .all_btn{
+        background: rgb(63, 139, 0); 
+        padding: 10px;
+        margin: 10px;
+        width: 30%; 
+        border: 1px solid orange;
+        border-radius: 5px;
+        color: blue;   
+        font-size: 1.em;
+        text-align: center;
+    }
+     
      .wrapper{
          margin: 0px;
          text-align: justify;
@@ -76,7 +80,6 @@ body{
          width: 100%;
      }
  
-         
      h2{
          text-align: left;
      }
@@ -88,7 +91,6 @@ body{
      }
      
      .final-page{
- 
          margin: 0px; 
          width: 100%; 
          visibility: hidden;
